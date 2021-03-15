@@ -1,0 +1,24 @@
+<div class="row">
+	<h4 class="mb-3">Resultado de la busqueda de: {{ultimoTerminoBuscado}}</h4>
+	<div
+		*ngFor="let gif of gifsEncontrados; let i=index;"
+		class="col-md-4 col-sm-12"
+	>
+		<div class="card zoom mt-3 animated fadeIn">
+			<div class="card-header">
+				<h4 class="card-title">
+					<span class="badge rounded-pill bg-secondary">
+						{{ i }}
+					</span>
+					{{ gif.title }}
+				</h4>
+			</div>
+			<img [src]="gif.images.downsized_medium.url" alt="{{gif.title}}" />
+			<div class="card-body">
+				<div class="car-text">
+					{{gif.title}}
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

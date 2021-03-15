@@ -1,0 +1,19 @@
+<div class="bg-dark border-right p-3" id="sideBarRecord">
+	<h3 class="text-light text-center">GifsApp</h3>
+	<hr class="text-white" />
+	<div class="list-group list-reset">
+		<a href="#" class="list-group-item list-group-item-action">
+			<i class="fa fa-list-ul" aria-hidden="true"></i> Recientes
+		</a>
+
+		<a
+			*ngFor="let termino of historial; let i=index"
+			(click)="buscar(termino)"
+			href="#"
+			class="list-group-item list-group-item-action"
+		>
+			<i class="fa fa-check-circle" aria-hidden="true"></i> {{ termino |
+			titlecase }}
+		</a>
+	</div>
+</div>
