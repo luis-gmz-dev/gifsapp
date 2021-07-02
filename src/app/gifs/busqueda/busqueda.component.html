@@ -1,15 +1,25 @@
-<div class="row p-3">
-	<div class="col">
-		<h5>
-			Buscar:
-		</h5>
-		<input
-			type="text"
-			value=""
-			class="form-control"
-			placeholder="Buscar gifs..."
-			(keyup.enter)="buscar(buscarGifs.value)"
-			#buscarGifs
-		/>
-	</div>
+<div class="container mt-3">
+  <div class="row">
+    <div class="col">
+      <div class="input-group mb-3">
+        <input
+          type="text"
+          class="form-control"
+          placeholder="Buscar gif"
+          aria-label="termino a buscar"
+          value=""
+          placeholder="Buscar gifs..."
+          (keyup.enter)="buscar(buscarGifs.value)"
+          #buscarGifs
+        />
+        <button
+          class="btn btn-outline-secondary"
+          type="button"
+          (click)="buscar(buscarGifs.value)"
+        >
+          Buscar
+        </button>
+      </div>
+    </div>
+  </div>
 </div>
